@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: url('/realistic-ocean.webp') no-repeat center center fixed;
+    background: url('../realistic-ocean.webp') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     transition: background-color 0.3s, color 0.3s;
