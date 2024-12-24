@@ -1,0 +1,205 @@
+/* Βασικές Ρυθμίσεις */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../assets/images/realistic-ocean.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+/* Light Mode */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Dark Mode Overlay */ 
+body.dark-mode::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    pointer-events: none;
+}
+
+/* Header */
+header {
+    background: rgba(0, 64, 128, 0.8);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+header .nav-menu li a:hover {
+    color: #00aaff;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    /* background: url('../assets/images/realistic-ocean.webp') no-repeat center center/cover;/ */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    animation: waveBackground 20s infinite linear alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px; /* Για να μην καλύπτεται από το header */
+}
+
+.hero-content {
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn {
+    background: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero .btn:hover {
+    background: #0088cc;
+    transform: scale(1.05);
+}
+
+/* Κυματισμός Φόντου */
+@keyframes waveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -20px -20px;
+    }
+}
+
+/* Σχετικά Section */
+#about {
+   
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ομάδα Section */
+#team {
+   
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Πρόοδος Section */
+#progress {
+   
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Επικοινωνία Section */
+#contact {
+   
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 64, 128, 0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+}
