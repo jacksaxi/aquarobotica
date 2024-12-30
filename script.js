@@ -1,29 +1,32 @@
+// Preloader
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    preloader.style.display = 'none';
+});
+
+// Smooth Scroll Animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(element => {
+    observer.observe(element);
+});
+
 // Theme Toggle
-const toggleButton = document.getElementById('theme-toggle');
+const toggleSwitch = document.getElementById('theme-toggle');
 const body = document.body;
 
 if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
-    toggleButton.textContent = '☀️';
+    toggleSwitch.checked = true;
 }
 
-toggleButton.addEventListener('click', () => {
+toggleSwitch.addEventListener('change', () => {
     body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        toggleButton.textContent = '☀️';
-    } else {
-        localStorage.setItem('theme', 'light');
-        toggleButton.textContent = '🌙';
-    }
-});
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
 });

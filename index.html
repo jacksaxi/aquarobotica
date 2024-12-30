@@ -8,6 +8,11 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <!-- Header Section -->
     <header>
         <div class="logo">Aqua Robotica</div>
@@ -19,109 +24,31 @@
                 <li><a href="#progress">Πρόοδος</a></li>
                 <li><a href="#contact">Επικοινωνία</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle">🌙</button>
         </nav>
+        <!-- Dark Mode Toggle Switch -->
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Καλωσορίσατε στην Aqua Robotica</h1>
-            <p>Η καινοτομία κάτω από την επιφάνεια.</p>
-            <a href="#about" class="btn">Μάθετε Περισσότερα</a>
-        </div>
-        <div class="bubbles-container">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-        </div>
-    </section>
+    <section id="hero" class="fade-in">Καλώς ήρθατε στο Aqua Robotica!</section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Σχετικά με την Aqua Robotica</h2>
-            <p>
-                kimeno 1
-            </p>
-        </div>
-    </section>
+    <section id="about" class="slide-in-left">Σχετικά με το project...</section>
 
     <!-- Team Section -->
-    <section id="team" class="team">
-        <div class="container">
-            <h2>Η Ομάδα Μας</h2>
-            <div class="team-members">
-                <div class="member">
-                    <h3>Μέλος 1</h3>
-                    <p>Ρόλος</p>
-                </div>
-                <div class="member">
-                    <h3>Μέλος 2</h3>
-                    <p>Ρόλος</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="team" class="fade-in">Γνωρίστε την ομάδα...</section>
 
     <!-- Progress Section -->
-    <section id="progress" class="progress">
-        <div class="container">
-            <h2>Πρόοδος</h2>
-            <p>
-                kimeno 2
-            </p>
-        </div>
-    </section>
+    <section id="progress" class="slide-in-right">Η πρόοδος μας...</section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Επικοινωνία</h2>
-            <p> text epikinonias</p>
-        </div>
-    </section>
+    <section id="contact" class="fade-in">Επικοινωνία...</section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Aqua Robotica. Όλα τα δικαιώματα κατοχυρωμένα.</p>
-    </footer>
+    <footer>© Aqua Robotica 2024</footer>
 </body>
 </html>
